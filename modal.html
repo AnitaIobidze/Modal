@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Product Display</title>
+        <link rel="stylesheet" href="modal.css"/>
+    </head>
+    <body>
+        <div class="head">
+            <h1>Product Store</h1>
+            <button id="createProductBtn" class="btn">Create New Product</button>
+        </div>
+
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalBtn">X</span>
+                <h2 id="modalTitle">Create a new product</h2>
+                <br />
+                <label for="productName">Product name</label>
+                <input type="text" name="productName" id="productName"/>
+                <br />
+                <br />
+                <label for="productPrice">Product price</label>
+                <input type="number" name="productPrice" id="productPrice"/>
+                <br />
+                <br />
+                <label for="productDescription">Product description</label>
+                <input name="productDescription" id="productDescription"/>
+                <br />
+                <br />
+                <label for="productImage">Product image</label>
+                <input type="text" name="productImage" id="productImage"/>
+                <br />
+                <br />
+                <button id="createProduct" class="btn">Create product</button>
+            </div>
+        </div>
+        <div class="posts" id="posts"></div>
+        <script src="modal.js"></script>
+    </body>
+</html>

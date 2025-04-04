@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    padding: 20px;
+}
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    padding: 16px;
+}
+.modal-content label{
+    display: block;
+}
+.modal-content input,
+textarea{
+    width: 100%;
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #ccc;
+}
+.btn{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: #2980b9;
+}
+.modal-content .btn{
+    width: 100%;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.posts{
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+    column-gap: 70px;
+}
+.posts img{
+    width: 300px;
+}
+.postsCard{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.gray{
+    color: gray;
+}
+.red{
+    color: red;
+}
