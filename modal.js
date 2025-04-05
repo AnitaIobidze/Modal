@@ -3,6 +3,8 @@ const productModal=document.getElementById("productModal")
 const closeModalBtn=document.getElementById("closeModalBtn")
 const createPost=document.getElementById("modalBtn")
 const posts=document.getElementById("posts")
+const deleteBtn=document.getElementById("delete")
+const edit=document.getElementById("edit")
 
 createProductBtn.addEventListener("click", function(){
     productModal.style.display="flex"
@@ -53,7 +55,7 @@ const addPost=async()=>{
     <h1 class="red">$${price}</h1>
     <div>
     <button id="edit" class="edit">Edit</button>
-    <button>Delete</button></div>`
+    <button id="delete" class="delete">Delete</button></div>`
     posts.appendChild(div)
 }
 fetching()
