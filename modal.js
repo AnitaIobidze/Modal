@@ -1,7 +1,7 @@
 const createProductBtn=document.getElementById("createProductBtn")
 const productModal=document.getElementById("productModal")
 const closeModalBtn=document.getElementById("closeModalBtn")
-const createPost=document.getElementById("createProduct")
+const createPost=document.getElementById("modalBtn")
 const posts=document.getElementById("posts")
 
 createProductBtn.addEventListener("click", function(){
@@ -52,7 +52,7 @@ const addPost=async()=>{
     <p class="gray">${description}</p>
     <h1 class="red">$${price}</h1>
     <div>
-    <button>Edit</button>
+    <button id="edit" class="edit">Edit</button>
     <button>Delete</button></div>`
     posts.appendChild(div)
 }
