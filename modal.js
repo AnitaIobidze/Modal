@@ -3,14 +3,16 @@ const productModal=document.getElementById("productModal")
 const closeModalBtn=document.getElementById("closeModalBtn")
 const createPost=document.getElementById("modalBtn")
 const posts=document.getElementById("posts")
-const deleteBtn=document.getElementById("delete")
-const edit=document.getElementById("edit")
+
+const closeModal=async()=>{
+    productModal.style.display="none"
+}
 
 createProductBtn.addEventListener("click", function(){
     productModal.style.display="flex"
 })
 closeModalBtn.addEventListener("click", function(){
-    productModal.style.display="none"
+    closeModal()
 })
 
 const fetching=async()=>{
@@ -45,7 +47,7 @@ const addPost=async()=>{
         fetching()
     }
     }
-    productModal.style.display="none"
+    closeModal()
     const div=document.createElement("div")
     div.classList.add("postsCard")
     div.innerHTML = `
@@ -53,10 +55,35 @@ const addPost=async()=>{
     <h1>${name}</h1>
     <p class="gray">${description}</p>
     <h1 class="red">$${price}</h1>
-    <div>
-    <button id="edit" class="edit">Edit</button>
-    <button id="delete" class="delete">Delete</button></div>`
+    <div>`
     posts.appendChild(div)
+    const deleteBtn=document.createElement("button")
+    deleteBtn.textContent="Delete"
+    deleteBtn.classList.add("delete")
+    div.appendChild(deleteBtn)
+    const editBtn=document.createElement("button")
+    editBtn.textContent="Edit"
+    editBtn.classList.add("edit")
+    div.appendChild(editBtn)
+    deleteBtn.addEventListener("click", async()=>{
+        const dataToSend={
+            name: name,
+            price: price,
+            description:description,
+            img:img
+        }
+        const jsonToSend=JSON.stringify(dataToSend)
+
+        const response=await fetch("http://localhost:3000/api/products",{
+            method: "POST",
+            body: jsonToSend,
+            headers: {"Content-Type": "application/json"}
+        })
+        if (response.ok) {
+            posts.removeChild(div)
+        }
+    })
 }
+
 fetching()
 createPost.addEventListener("click", addPost)
