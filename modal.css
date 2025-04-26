@@ -1,15 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-
-body{
+  }
+  body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
     padding: 20px;
-}
-.modal{
+  }
+  .modal {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -19,26 +18,37 @@ body{
     display: none;
     justify-content: center;
     align-items: center;
-}
-.modal-content{
+  }
+  .modal-content {
     background-color: #fff;
     border-radius: 8px;
     max-width: 400px;
     width: 100%;
     padding: 16px;
-}
-.modal-content label{
+  }
+  .modal-content label {
     display: block;
-}
-.modal-content input,
-textarea{
+  }
+  .modal-content input,
+  textarea {
     width: 100%;
     border-radius: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
     border: 1px solid #ccc;
-}
-.btn{
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .close:hover {
+    color: #333;
+  }
+  .btn {
     background-color: #3498db;
     color: white;
     border: none;
@@ -46,57 +56,35 @@ textarea{
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-}
-.btn:hover{
+  }
+  .btn:hover {
     background-color: #2980b9;
-}
-.modal-content .btn{
+  }
+  .modal-content .btn {
     width: 100%;
-}
-.close{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #fff;
-}
-.head{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-}
-.posts{
-    display: flex;
-    flex-direction: row;
-    margin: 100px;
-    column-gap: 70px;
+  }
+  .container {
     width: 1100px;
-    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-}
-.posts img{
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .product {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.3% - 60px);
+  }
+  .product img {
     width: 100%;
     height: 200px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-.postsCard{
-    display: flex;
-    flex-direction: column;
-    width: calc(33,3%-60px);
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
-.gray{
-    color: gray;
-}
-.red{
-    color: red;
-}
+  }
